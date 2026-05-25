@@ -1,0 +1,47 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# PyCharm
+.idea/
+*.iml
+
+# pytest
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml
+
+# Selenium
+*.log
+screenshots/
+downloads/
+
+# Environment variables
+.env
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python packaging
+pip-wheel-metadata/
+
+# Mypy / Ruff / Black caches
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+# Jupyter
+.ipynb_checkpoints/
