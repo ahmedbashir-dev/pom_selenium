@@ -25,7 +25,7 @@ def test_complete_checkout(driver):
     assert badge.text == "1"
 
     # Go to cart
-    driver.find_element(By.CLASS_NAME, "shopping_cart_link").click()
+    driver.find_element(By.CLASS_NAME, "shopping_cart_link").click() # go to cart
 
     # --- Page 3: Cart Page ---
     wait.until(EC.url_contains("cart"))

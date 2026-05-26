@@ -19,7 +19,13 @@ class LoginPage(BasePage):
 
     def click_login(self):
         self.click(self.LOGIN_BUTTON)
-        return self
+        self.wait_for_url("inventory")
+        from pages.inventory_page import InventoryPage
+        return InventoryPage(self.driver)
 
     def login(self, username, password):
-        self.enter_username(username).enter_password(password).click_login()
+        return (
+            self.enter_username(username)
+            .enter_password(password)
+            .click_login()
+        )
