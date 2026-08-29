@@ -4,7 +4,7 @@ from pages.login_page import LoginPage
 def test_success_login(driver):
     inventory_page = (
         LoginPage(driver)
-        .open()                          # or .open(LoginPage.URL) if you keep the parameter
+        .load()                         # or .open(LoginPage.URL) if you keep the parameter
         .login("standard_user", "secret_sauce")
     )
 

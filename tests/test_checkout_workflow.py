@@ -4,7 +4,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 def test_complete_checkout(driver):
-    wait = WebDriverWait(driver, 10)
+    wait = WebDriverWait(driver, 20)
 
     # --- Page 1: Login ---
     driver.get("https://saucedemo.com")

@@ -5,7 +5,7 @@ def test_checkout_workflow(driver):
     # Login
     inventory_page = (
         LoginPage(driver)
-        .open()
+        .load()
         .login("standard_user", "secret_sauce")
     )
 
