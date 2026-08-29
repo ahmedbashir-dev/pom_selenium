@@ -13,7 +13,7 @@ def test_checkout_workflow(driver):
     first_item_name = inventory_page.get_first_item_name()
 
     # Add to cart and verify badge
-    inventory_page.add_item_to_cart()
+    inventory_page.add_backpack_to_cart()
     assert inventory_page.get_cart_count() == "1"
 
     # Go to cart
