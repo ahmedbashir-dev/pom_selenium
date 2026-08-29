@@ -10,7 +10,7 @@ class CheckoutPage(BasePage):
     ITEM_NAMES = (By.CLASS_NAME, "inventory_item_name")
     FINISH_BUTTON = (By.ID, "finish")
 
-    def fill_details(self, first_name, last_name, postal_code):
+    def fill_details(self, first_name: str, last_name: str, postal_code: str):
         self.type_text(self.FIRST_NAME_INPUT, first_name)
         self.type_text(self.LAST_NAME_INPUT, last_name)
         self.type_text(self.POSTAL_CODE_INPUT, postal_code)
@@ -21,7 +21,7 @@ class CheckoutPage(BasePage):
         self.wait_for_url("checkout-step-two")
         return self
 
-    def get_cart_item_name_by_index(self, idx):
+    def get_cart_item_name_by_index(self, idx: int) -> str:
         items = self.find_all(self.ITEM_NAMES)
         return items[idx].text
 

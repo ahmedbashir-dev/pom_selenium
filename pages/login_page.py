@@ -8,6 +8,11 @@ class LoginPage(BasePage):
     USERNAME_INPUT = (By.ID, "user-name")
     PASSWORD_INPUT = (By.ID, "password")
     LOGIN_BUTTON = (By.ID, "login-button")
+    ERROR_MESSAGE = (By.CSS_SELECTOR, "[data-test='error']")
+
+    def load(self):
+        """Navigate to the login page."""
+        return super().open(self.URL)
 
     def enter_username(self, username):
         self.type_text(self.USERNAME_INPUT, username)
